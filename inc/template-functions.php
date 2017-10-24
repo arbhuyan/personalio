@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Personalio
+ * @package personalio
  */
 
 /**
@@ -11,7 +11,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function Personalio_body_classes( $classes ) {
+function personalio_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -19,35 +19,35 @@ function Personalio_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'Personalio_body_classes' );
+add_filter( 'body_class', 'personalio_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function Personalio_pingback_header() {
+function personalio_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'Personalio_pingback_header' );
+add_action( 'wp_head', 'personalio_pingback_header' );
 
-if(!function_exists('call_theme_footer')){
-	function call_theme_footer() {
+if(!function_exists('personalio_call_theme_footer')){
+	function personalio_call_theme_footer() {
 		echo'<div class="copyright-info">';
 			
 			printf( esc_html__( '&copy; %2$s All Rights Reserved by %1$s', 'personalio' ), '<a href="'.esc_url( home_url() ).'">'.get_bloginfo( 'name' ).'</a>', date('Y') );
 			
 		echo'</div>';
 
-		wp_credits();
+		personalio_wp_credits();
 	}
 }
 
 /**
  * Add credits to WordPress
  */
-if(!function_exists('wp_credits')){
-	function wp_credits() { ?>
+if(!function_exists('personalio_wp_credits')){
+	function personalio_wp_credits() { ?>
 		<div class="development-info">
 			<?php
 				/* translators: 1: Theme name, 2: Theme author. */

@@ -1,8 +1,8 @@
 <?php
 /**
- * Personalio Theme Customizer
+ * personalio Theme Customizer
  *
- * @package Personalio
+ * @package personalio
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function Personalio_customize_register( $wp_customize ) {
+function personalio_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -18,11 +18,11 @@ function Personalio_customize_register( $wp_customize ) {
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
 			'selector'        => '.site-title a',
-			'render_callback' => 'Personalio_customize_partial_blogname',
+			'render_callback' => 'personalio_customize_partial_blogname',
 		) );
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector'        => '.site-description',
-			'render_callback' => 'Personalio_customize_partial_blogdescription',
+			'render_callback' => 'personalio_customize_partial_blogdescription',
 		) );
 	}
 
@@ -121,14 +121,14 @@ function Personalio_customize_register( $wp_customize ) {
 		) 
 	));
 }
-add_action( 'customize_register', 'Personalio_customize_register' );
+add_action( 'customize_register', 'personalio_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function Personalio_customize_partial_blogname() {
+function personalio_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -137,26 +137,26 @@ function Personalio_customize_partial_blogname() {
  *
  * @return void
  */
-function Personalio_customize_partial_blogdescription() {
+function personalio_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function Personalio_customize_preview_js() {
+function personalio_customize_preview_js() {
 	wp_enqueue_script( 'personalio-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'Personalio_customize_preview_js' );
+add_action( 'customize_preview_init', 'personalio_customize_preview_js' );
 
 /*
 *	Save customizer settings
 */
-function Personalio_dynamic_css() {
+function personalio_dynamic_css() {
 	?>
 	<style type='text/css'>
 		.site-header, .site-footer, .main-navigation ul ul {
-			background: url('<?php echo get_header_image();?>');
+			background: linear-gradient(to right top, rgba(8, 8, 8, 0.75), rgba(8, 8, 8, 0.75)), #444 url('<?php echo get_header_image();?>') no-repeat fixed top center / cover;
 		}
 		
 		.main-navigation a {
@@ -208,4 +208,4 @@ function Personalio_dynamic_css() {
 	</style>
 	<?php
 }
-add_action( 'wp_head' , 'Personalio_dynamic_css' );
+add_action( 'wp_head' , 'personalio_dynamic_css' );

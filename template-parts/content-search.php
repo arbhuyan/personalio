@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Personalio
+ * @package personalio
  */
 
 ?>
@@ -17,7 +17,7 @@
 
 			<?php if ( 'post' === get_post_type() ) : ?>
 			<div class="entry-meta">
-				<?php Personalio_posted_on(); ?>
+				<?php personalio_posted_on(); ?>
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->

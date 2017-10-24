@@ -3,8 +3,8 @@ Theme Name: Personalio
 Theme URI: http://anisbd.com/personalio-theme/
 Author: MD. Anisur Rahman Bhuyan
 Author URI: http://anisbd.com/
-Description: Personalio is a free WordPress theme for blog and portfolio. This theme is fully responsive and is built on customizer that enable you to configure the website with live preview. Personalio is Cross browser compatible, SEO friendly, translation ready and is compatible with Jetpack and all other major plugins.
-Version: 1.0.0
+Description: Personalio is a free WordPress theme for blog and portfolio. This theme is fully responsive and is built on customizer that enable you to configure the website with live preview. personalio is Cross browser compatible, SEO friendly, translation ready and is compatible with Jetpack and all other major plugins.
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: personalio
@@ -1142,6 +1142,11 @@ a:active {
 .entry-meta span i {
 	display: inline-block;
 	margin-right: 3px;
+}
+
+.post-thumbnail img {
+	width: 100%;
+	height: auto;
 }
 
 .post-password-form input {

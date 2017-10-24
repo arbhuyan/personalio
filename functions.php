@@ -1,13 +1,13 @@
 <?php
 /**
- * Personalio functions and definitions
+ * personalio functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Personalio
+ * @package personalio
  */
 
-if ( ! function_exists( 'Personalio_setup' ) ) :
+if ( ! function_exists( 'personalio_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,11 +15,11 @@ if ( ! function_exists( 'Personalio_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function Personalio_setup() {
+	function personalio_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Personalio, use a find and replace
+		 * If you're building a theme based on personalio, use a find and replace
 		 * to change 'personalio' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'personalio', get_template_directory() . '/languages' );
@@ -60,7 +60,7 @@ if ( ! function_exists( 'Personalio_setup' ) ) :
 		) );
 
 		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'Personalio_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'personalio_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -81,7 +81,7 @@ if ( ! function_exists( 'Personalio_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'Personalio_setup' );
+add_action( 'after_setup_theme', 'personalio_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -90,17 +90,17 @@ add_action( 'after_setup_theme', 'Personalio_setup' );
  *
  * @global int $content_width
  */
-function Personalio_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'Personalio_content_width', 640 );
+function personalio_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'personalio_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'Personalio_content_width', 0 );
+add_action( 'after_setup_theme', 'personalio_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function Personalio_widgets_init() {
+function personalio_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'personalio' ),
 		'id'            => 'sidebar-1',
@@ -121,12 +121,12 @@ function Personalio_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'Personalio_widgets_init' );
+add_action( 'widgets_init', 'personalio_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function Personalio_scripts() {
+function personalio_scripts() {
 
 	// theme styles
 	wp_enqueue_style( 'personalio-style', get_stylesheet_uri() );
@@ -139,7 +139,7 @@ function Personalio_scripts() {
 	wp_enqueue_style('google-font');
 
 	// navigation
-	wp_enqueue_script( 'personalio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20170811', true );
+	wp_enqueue_script( 'personalio-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20170811', true );
 
 	// skip link focus fix
 	wp_enqueue_script( 'personalio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20170811', true );
@@ -149,16 +149,16 @@ function Personalio_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'Personalio_scripts' );
+add_action( 'wp_enqueue_scripts', 'personalio_scripts' );
 
-if(!function_exists('Personalio_search_form')){
+if(!function_exists('personalio_search_form')){
 	/**
 	 * Generate custom search form
 	 *
 	 * @param string $form Form HTML.
 	 * @return string Modified form HTML.
 	*/
-	function Personalio_search_form( $form ) {
+	function personalio_search_form( $form ) {
 	    $form = '
 		    <form role="search" method="get" id="search-form" class="search-form" action="' . home_url( '/' ) . '" >
 			    <div class="search-input">
@@ -173,7 +173,7 @@ if(!function_exists('Personalio_search_form')){
 	 
 	    return $form;
 	}
-	add_filter( 'get_search_form', 'Personalio_search_form' );
+	add_filter( 'get_search_form', 'personalio_search_form' );
 }
 
 /**

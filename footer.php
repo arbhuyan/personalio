@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Personalio
+ * @package personalio
  */
 
 ?>
@@ -29,7 +29,7 @@
 
 		<div class="site-footer-info">
 			<div class="site-wrapper">
-				<?php call_theme_footer(); ?>
+				<?php personalio_call_theme_footer(); ?>
 			</div> <!-- .site-wrapper -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

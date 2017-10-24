@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Personalio
+ * @package personalio
  */
 
 /**
@@ -14,11 +14,11 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function Personalio_jetpack_setup() {
+function personalio_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'Personalio_infinite_scroll_render',
+		'render'    => 'personalio_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -37,12 +37,12 @@ function Personalio_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', 'Personalio_jetpack_setup' );
+add_action( 'after_setup_theme', 'personalio_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function Personalio_infinite_scroll_render() {
+function personalio_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

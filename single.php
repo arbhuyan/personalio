@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Personalio
+ * @package personalio
  */
 
 get_header(); ?>

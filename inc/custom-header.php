@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Personalio
+ * @package personalio
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses Personalio_header_style()
+ * @uses personalio_header_style()
  */
-function Personalio_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'Personalio_custom_header_args', array(
-		'default-image'          => get_template_directory_uri() . '/images/dark_brick_wall.png',
+function personalio_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'personalio_custom_header_args', array(
+		'default-image'          => get_template_directory_uri() . '/images/gordon-williams-257623.jpg',
 		'default-text-color'     => '#dddddd',
-		'width'                  => 96,
-		'height'                 => 96,
+		'width'                  => 2000,
+		'height'                 => 500,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'Personalio_header_style',
+		'wp-head-callback'       => 'personalio_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'Personalio_custom_header_setup' );
+add_action( 'after_setup_theme', 'personalio_custom_header_setup' );
 
-if ( ! function_exists( 'Personalio_header_style' ) ) :
+if ( ! function_exists( 'personalio_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see Personalio_custom_header_setup().
+	 * @see personalio_custom_header_setup().
 	 */
-	function Personalio_header_style() {
+	function personalio_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

@@ -1,17 +1,17 @@
-=== Personalio ===
+=== personalio ===
 
 Contributors: MD. Anisur Rahman Bhuyan
 Tags: two-columns, right-sidebar, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.0
-Tested up to: 4.8.1
-Stable tag: 1.0.0
+Tested up to: 4.8.2
+Stable tag: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Personalio is a free and lightweight WordPress theme for blogging. This theme is fully responsive and is built on customizer that enable you to configure the website with live preview. Personalio is SEO friendly, RTL Supported, Cross browser compatible, translation ready and is compatible with Jetpack and all other major plugins.
+personalio is a free and lightweight WordPress theme for blogging. This theme is fully responsive and is built on customizer that enable you to configure the website with live preview. personalio is SEO friendly, RTL Supported, Cross browser compatible, translation ready and is compatible with Jetpack and all other major plugins.
 
 == Installation ==
 
@@ -23,7 +23,7 @@ Personalio is a free and lightweight WordPress theme for blogging. This theme is
 
 = Does this theme support any plugins? =
 
-Yes, Personalio supports all major plugins and includes support for Infinite Scroll in Jetpack.
+Yes, personalio supports all major plugins and includes support for Infinite Scroll in Jetpack.
 
 = Does this theme support RTL? =
 
@@ -50,9 +50,13 @@ License: Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0
 * Philosopher Font by Jovanny Lemonad - https://fonts.google.com/specimen/Philosopher
 License: Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 
-* dark_brick_wall.png - https://www.toptal.com/designers/subtlepatterns/dark-brick-wall/
+* gordon-williams-257623.jpg - https://unsplash.com/photos/x08CJHnq_ts
+License: CC0 1.0 Universal (https://unsplash.com/license)
 
 == Changelog ==
+
+= 1.0.1 - October 25 2017 =
+* Header image updated
 
 = 1.0 - August 18 2017 =
 * Initial release
