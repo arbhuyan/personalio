@@ -1,0 +1,63 @@
+/*
+Theme Name: Personalio
+
+Adding support for languages written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right-to-Left_Language_Support
+
+*/
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+#wp-calendar #prev,
+.main-navigation ul ul,
+.site-content .article-data table {
+	text-align: right;
+}
+
+#wp-calendar #next,
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next,
+.development-info {
+	text-align: left;
+}
+
+.development-info {
+	float: left;
+}
+
+.main-navigation,
+.main-navigation ul ul,
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous,
+.copyright-info {
+	float: right;
+}
+
+.widget_categories li::before {
+	margin-left: 5px;
+	float: right;
+}
+
+.widget_categories li:before::hover {
+	margin-left: 5px;
+	float: right;
+}
+
+.entry-meta span i {
+	margin-left: 3px;
+}
+
+.read-more i.fa {
+	margin-left: 3px;
+}
+
+.main-navigation ul ul {
+	padding-right: 0px;
+}
