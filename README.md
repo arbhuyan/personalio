@@ -3,15 +3,15 @@ Personalio is a free and lightweight WordPress theme for blogging. This theme is
 
 # Package Info
 
-	Package Name 	: 	Personalio
-	Package Version	: 	1.0.1
-	Author Name		: 	MD. Anisur Rahman Bhuyan
-	Author URI 		: 	http://anisbd.com
-	Author Email 	: 	tahian8@gmail.com
-	Licence			:	Open Source GPLv2
-	Created 		:	August 18 2017
-	Updated 		:	October 25 2017
-	Url				:	https://wordpress.org/themes/personalio
+Package Name 	: 	Personalio
+Package Version	: 	1.0.1
+Author Name		:	MD. Anisur Rahman Bhuyan
+Author URI		:	http://anisbd.com
+Author Email	:	tahian8@gmail.com
+Licence			:	Open Source GPLv2
+Created			:	August 18 2017
+Updated			:	October 25 2017
+Repository Url	:	https://wordpress.org/themes/personalio
 
 
 # Installation
